@@ -77,4 +77,8 @@ class OrderStatusUpdateAPIView(APIView):
             {"message": "Order status updated"},
             status=status.HTTP_200_OK
         )
-    
+
+class AdminOrderListAPIView(ListAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderListSerializer
+    permission_classes = [IsAdminUser]
