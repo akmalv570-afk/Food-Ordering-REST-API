@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "104.248.34.216",
     "shop.quizsite.uz",
+    "www.shop.quizsite.uz",
 ]
 
 
@@ -130,7 +131,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -155,9 +158,15 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "https://shop.quizsite.uz",
+]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://shop.quizsite.uz",
+    "https://www.shop.quizsite.uz",
 ]
 
 
