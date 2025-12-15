@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2m+%zs-g@_==&f_c^4w$rgxtaoj@6r4kqy(m6bel5i5q13$(zm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['104.248.34.216','shop.quizsite.uz']
 
 
 # Application definition
